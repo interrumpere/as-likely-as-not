@@ -1,0 +1,33 @@
+{
+  "_about": "Starting values from bible §10–11. Owned by the coding agent; change only in playtesting and log every change in design/DECISIONS.md. The rules code reads every number from here.",
+  "PEN_MAX": 150,
+  "credit": { "0": 0, "1": 0.5, "2": 0.75, "3": 1.0 },
+  "paidThreshold": 50,
+  "silenceLimitPerScene": 3,
+  "anita": { "rangePoints": 3, "freeCallsCase1": 1, "callsAfterCase1": 3 },
+  "govCaps": {
+    "gov_badge_1971": { "questionId": "Q_WHEN", "versionId": "apr", "cap": 85 }
+  },
+  "cases": {
+    "case1": {
+      "questionId": "Q_WHEN",
+      "K": 100,
+      "telling": "tell_gerry",
+      "shortestPath": { "apr": 76, "feb": 106 }
+    }
+  },
+  "tellings": {
+    "tell_gerry": {
+      "penClickEvery": 10,
+      "stopwatchOutAt": 80,
+      "zones": [
+        { "id": "zone_gerry_locker",   "version": null,  "rate": 0,  "shortestTicks": null },
+        { "id": "zone_gerry_stepoff",  "version": null,  "rate": 1,  "shortestTicks": 2 },
+        { "id": "zone_gerry_aisle",    "version": null,  "rate": 3,  "shortestTicks": 4 },
+        { "id": "zone_gerry_doorway",  "version": null,  "rate": 6,  "shortestTicks": 2 },
+        { "id": "zone_gerry_cell_apr", "version": "apr", "rate": 10, "shortestTicks": 5 },
+        { "id": "zone_gerry_cell_feb", "version": "feb", "rate": 16, "shortestTicks": 5 }
+      ]
+    }
+  }
+}

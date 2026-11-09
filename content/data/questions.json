@@ -1,0 +1,13 @@
+{
+  "_about": "Questions and their versions (bible §10.3, §11.2). Version order is the tie-break order when neither tied version is the claimed one. Labels are player-facing prose and belong to the writing agent.",
+  "questions": [
+    {
+      "id": "Q_WHEN",
+      "caseId": "case1",
+      "versions": [
+        { "id": "feb", "label": "[[TODO: writing — label for the February version]]" },
+        { "id": "apr", "label": "[[TODO: writing — label for the April version]]" }
+      ]
+    }
+  ]
+}

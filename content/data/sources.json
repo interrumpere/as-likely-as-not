@@ -1,0 +1,10 @@
+{
+  "_about": "Source catalog (bible §11.2, §14.3). Static fields only. hanrahanPresent and obtainedOn are stamped at runtime by say()/give() and live in GameState, not here.",
+  "sources": [
+    { "id": "say_gerry_feb",    "questionId": "Q_WHEN", "versionId": "feb", "kind": "say", "speaker": "gerry" },
+    { "id": "say_hanrahan_feb", "questionId": "Q_WHEN", "versionId": "feb", "kind": "say", "speaker": "hanrahan" },
+    { "id": "doc_stubs_apr",    "questionId": "Q_WHEN", "versionId": "apr", "kind": "doc" },
+    { "id": "say_gerry_apr",    "questionId": "Q_WHEN", "versionId": "apr", "kind": "say", "speaker": "gerry" },
+    { "id": "gov_badge_1971",   "questionId": "Q_WHEN", "versionId": null,  "kind": "gov" }
+  ]
+}

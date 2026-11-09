@@ -1,0 +1,31 @@
+{
+  "_about": "Bible §11.4, verbatim in 'filed' and the expected columns. The 'inputs' objects are derived from §11.2–11.3 when the repo was set up (2026-11-09); if they disagree with the bible, the bible wins and this is a contract change. K = 100 (Gerry, lung). POC is compared to one decimal place.",
+  "K": 100,
+  "vectors": [
+    {"id": "T1",  "filed": "April + stubs, shortest walk (76)",               "finding": "apr", "strength": 3, "poc": 43.2, "paid": false,
+     "inputs": {"claimed": "apr", "attached": ["doc_stubs_apr"], "walk": {"version": "apr", "total": 76}, "discredited": false}},
+    {"id": "T2",  "filed": "April + stubs, long walk (110, capped at 85)",   "finding": "apr", "strength": 3, "poc": 45.9, "paid": false,
+     "inputs": {"claimed": "apr", "attached": ["doc_stubs_apr"], "walk": {"version": "apr", "total": 110}, "discredited": false}},
+    {"id": "T3",  "filed": "Feb, Gerry only, shortest (106)",                "finding": "feb", "strength": 1, "poc": 34.6, "paid": false,
+     "inputs": {"claimed": "feb", "attached": ["say_gerry_feb"], "walk": {"version": "feb", "total": 106}, "discredited": false}},
+    {"id": "T4",  "filed": "Feb, Gerry + Denny, shortest (106)",             "finding": "feb", "strength": 2, "poc": 44.3, "paid": false,
+     "inputs": {"claimed": "feb", "attached": ["say_gerry_feb", "say_hanrahan_feb"], "walk": {"version": "feb", "total": 106}, "discredited": false}},
+    {"id": "T5",  "filed": "As T4, one extra cell tick (122)",               "finding": "feb", "strength": 2, "poc": 47.8, "paid": false,
+     "inputs": {"claimed": "feb", "attached": ["say_gerry_feb", "say_hanrahan_feb"], "walk": {"version": "feb", "total": 122}, "discredited": false}},
+    {"id": "T6",  "filed": "As T4, two extra cell ticks (138)",              "finding": "feb", "strength": 2, "poc": 50.9, "paid": true,
+     "inputs": {"claimed": "feb", "attached": ["say_gerry_feb", "say_hanrahan_feb"], "walk": {"version": "feb", "total": 138}, "discredited": false}},
+    {"id": "T7",  "filed": "As T6, but stubs attached",                      "finding": "apr", "strength": 2, "poc": 36.3, "paid": false,
+     "inputs": {"claimed": "feb", "attached": ["say_gerry_feb", "say_hanrahan_feb", "doc_stubs_apr"], "walk": {"version": "feb", "total": 138}, "discredited": false}},
+    {"id": "T8",  "filed": "As T6, recalculated: Denny discredited, Denny was in the room for Gerry's testimony", "finding": null, "strength": 0, "poc": 0.0, "paid": false,
+     "inputs": {"claimed": "feb", "attached": ["say_gerry_feb", "say_hanrahan_feb"], "hanrahanPresent": {"say_gerry_feb": true}, "walk": {"version": "feb", "total": 138}, "discredited": true}},
+    {"id": "T9",  "filed": "As T6, recalculated: Gerry had been interviewed alone", "finding": "feb", "strength": 1, "poc": 40.8, "paid": false,
+     "inputs": {"claimed": "feb", "attached": ["say_gerry_feb", "say_hanrahan_feb"], "hanrahanPresent": {"say_gerry_feb": false}, "walk": {"version": "feb", "total": 138}, "discredited": true}},
+    {"id": "T10", "filed": "As T2, recalculated",                            "finding": "apr", "strength": 3, "poc": 45.9, "paid": false,
+     "inputs": {"claimed": "apr", "attached": ["doc_stubs_apr"], "walk": {"version": "apr", "total": 110}, "discredited": true}},
+    {"id": "T11", "filed": "Feb, Gerry only, walk of 300 (pen stops at 150)", "finding": "feb", "strength": 1, "poc": 42.9, "paid": false,
+     "inputs": {"claimed": "feb", "attached": ["say_gerry_feb"], "walk": {"version": "feb", "total": 300}, "discredited": false}},
+    {"id": "T12", "filed": "Feb, Gerry + Denny, walk of 300 (pen stops at 150)", "finding": "feb", "strength": 2, "poc": 52.9, "paid": true,
+     "inputs": {"claimed": "feb", "attached": ["say_gerry_feb", "say_hanrahan_feb"], "walk": {"version": "feb", "total": 300}, "discredited": false}}
+  ],
+  "govSources": ["gov_badge_1971"]
+}

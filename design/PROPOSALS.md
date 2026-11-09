@@ -19,4 +19,13 @@ The data model and the reference algorithm are set as ordinary paragraphs in the
 ## [open] P-003 — Typo in an appendix link  (from: writing, 2026-11-09, Appendix)
 The Cattaraugus Creek link points to `en.wikipedia.com`, which should be `en.wikipedia.org`.
 
+## [open] P-004 — "Employment is established" in §10.4 isn't in §14.4  (from: code, 2026-11-09, §10.4, §14.4, §10.7)
+§10.4 says `paid = POC >= 50 … and employment is established`, but the reference algorithm in §14.4 returns `paid: POC >= 50` and says nothing about employment. §10.7 defines it only for Dolores (identity points). For Case 1, what establishes Gerry's employment? Is it simply assumed, or does a finding of any version count? **Default in code until decided:** an optional input that defaults to true, so the vectors are unaffected. Blocks nothing until Case 2.
+
+## [open] P-005 — No Ink binding records a fact that opens a zone  (from: code, 2026-11-09, §11.3, §14.3, §14.5)
+Zones have `opensWith: factId` (§14.3), and §11.3 gives the opening lines, but §14.5 only has `say(sourceId)`, which is for scored sources. Proposal: add either a binding `tell(factId)` or a documented Ink tag (`# opens: <zoneId>`) to §14.5, and say whether zone-opening facts are their own ID class (e.g. `fact_<...>`) or just reuse the zone ID. I've asked the writing agent which they'd rather author. Blocks build step 3.
+
+## [open] P-006 — Forfeiture in the recalculation isn't in the algorithm  (from: code, 2026-11-09, §10.6, §14.4, §11.4)
+§10.6 says "a claimant found to have defrauded the program forfeits permanently", but neither §14.4 nor the vectors model it (T8 and T9 just re-adjudicate). When is a claimant "found to have defrauded"? Is it when Frame Q1 is answered "no", when Q2 is answered "yes", or something else, and does forfeiture override a finding that would otherwise pay? This belongs in `recalc.ts`, not `adjudicate.ts`, so step 1 isn't blocked, but step 4 (Frame 1) needs an answer.
+
 ## Resolved

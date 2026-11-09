@@ -31,14 +31,14 @@ The bible gives zone names and opening lines but no IDs. **The coding agent prop
 
 | Zone (bible name) | Opened by | Rate | Ticks on shortest path | ID |
 |---|---|---|---|---|
-| Locker room | "They gave you a pen." | 0 | any | *[[TODO: code]]* |
-| Step-off | "You'd stand on the tape." | 1 | 2 | |
-| Aisle | "Long hall, green." | 3 | 4 | |
-| Doorway | "A fella with a stopwatch." | 6 | 2 | |
-| Cell, April version | "Wiped down a pump." | 10 | 5 | |
-| Cell, February version | "It was all over the floor." | 16 | 5 | |
+| Locker room | "They gave you a pen." | 0 | any | `zone_gerry_locker` *proposed* |
+| Step-off | "You'd stand on the tape." | 1 | 2 | `zone_gerry_stepoff` *proposed* |
+| Aisle | "Long hall, green." | 3 | 4 | `zone_gerry_aisle` *proposed* |
+| Doorway | "A fella with a stopwatch." | 6 | 2 | `zone_gerry_doorway` *proposed* |
+| Cell, April version | "Wiped down a pump." | 10 | 5 | `zone_gerry_cell_apr` *proposed* |
+| Cell, February version | "It was all over the floor." | 16 | 5 | `zone_gerry_cell_feb` *proposed* |
 
-Telling ID for Case 1: *[[TODO: code]]*. Shortest walks: 76 (`apr`), 106 (`feb`). The pen stops at 150.
+Telling ID for Case 1: `tell_gerry` *proposed*. Versions `apr` and `feb`, so Ink calls `open_telling("tell_gerry", "feb")`. Shortest walks: 76 (`apr`), 106 (`feb`). The pen stops at 150.
 
 ## Ink bindings (§14.5)
 ```
@@ -52,4 +52,9 @@ EXTERNAL silence_count()
 ```
 
 ## Proposed by code
-*(Empty. Add proposed IDs here with a date, then log them in DECISIONS.md.)*
+### 2026-11-09 — Case 1 Telling and zones  (code)
+- Telling: `tell_gerry`. Pattern: `tell_<speaker>`. A later case with more than one Telling per speaker would become `tell_<speaker>_<thing>`.
+- Zones: `zone_<telling speaker>_<place>[_<version>]`, i.e. `zone_gerry_locker`, `zone_gerry_stepoff`, `zone_gerry_aisle`, `zone_gerry_doorway`, `zone_gerry_cell_apr`, `zone_gerry_cell_feb`. Shared zones carry no version.
+- Case ID: `case1` (the key the rules use for K, shortest paths and the question at issue).
+- Speaker IDs in `content/data/sources.json`: `gerry`, `hanrahan`. Docs and gov sources have no speaker.
+- **Not yet proposed:** fact IDs for the lines that open zones (`opensWith` in §14.3). §14.5 has no binding that records a said fact, so this waits on the question in `INBOX-writing.md`.
